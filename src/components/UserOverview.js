@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import {Component} from 'react';
-import {Container, Header} from 'semantic-ui-react';
+import {Container} from 'semantic-ui-react';
 
 class UserOverview extends Component {
     render() {

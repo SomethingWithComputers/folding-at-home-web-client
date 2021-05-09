@@ -1,7 +1,7 @@
 import jsonp from 'jsonp-modernized';
 import PropTypes from 'prop-types';
 import {Component} from 'react';
-import {Container, Header, Loader, Segment} from 'semantic-ui-react';
+import {Container, Header, Loader} from 'semantic-ui-react';
 
 class PointsOverview extends Component {
     constructor(props) {
@@ -20,7 +20,7 @@ class PointsOverview extends Component {
     componentDidMount() {
         jsonp('https://stats.foldingathome.org/user', {parameters: this.props.credentials})
             .then(response => {
-                console.log(response[0][1]);
+                // console.log(response[0][1]);
                 this.setState({
                     isLoading: false,
                     statistics: response[0][1]
